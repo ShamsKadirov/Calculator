@@ -1,0 +1,174 @@
+:root {
+  --bg: #0f1220;
+  --panel: #171b2e;
+  --screen: #0b0e1a;
+  --btn: #232842;
+  --btn-hover: #2c3250;
+  --btn-active: #1b1f37;
+  --func: #3a4166;
+  --op: #5b4bd6;
+  --op-hover: #6c5ce7;
+  --equals: #f0b90b;
+  --equals-hover: #ffcc33;
+  --equals-active: #d6a306;
+  --text: #f4f6ff;
+  --muted: #9aa3c7;
+  --shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  background:
+    radial-gradient(1000px 600px at 20% 10%, rgba(91, 75, 214, 0.22), transparent 60%),
+    radial-gradient(800px 500px at 85% 90%, rgba(240, 185, 11, 0.10), transparent 55%),
+    var(--bg);
+  color: var(--text);
+  padding: 20px;
+}
+
+.calc {
+  width: 320px;
+  background: var(--panel);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 24px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+
+.calc__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.calc__title {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.calc__badge {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #ffe;
+  background: linear-gradient(135deg, var(--op), var(--equals));
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.calc__screen {
+  background: var(--screen);
+  border-radius: 16px;
+  padding: 18px 16px;
+  margin-bottom: 16px;
+  min-height: 96px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-align: right;
+  overflow: hidden;
+}
+
+.calc__expression {
+  font-size: 15px;
+  color: var(--muted);
+  min-height: 20px;
+  white-space: nowrap;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.calc__result {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.1;
+  white-space: nowrap;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.calc__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.btn {
+  height: 56px;
+  border: none;
+  border-radius: 14px;
+  background: var(--btn);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.12s ease, transform 0.05s ease;
+}
+
+.btn:hover {
+  background: var(--btn-hover);
+}
+
+.btn:active {
+  background: var(--btn-active);
+  transform: scale(0.96);
+}
+
+.btn--func {
+  background: var(--func);
+  font-size: 17px;
+}
+
+.btn--func:hover {
+  background: #465080;
+}
+
+.btn--op {
+  background: var(--op);
+  color: #fff;
+  font-size: 24px;
+}
+
+.btn--op:hover {
+  background: var(--op-hover);
+}
+
+.btn--op.is-active {
+  background: #fff;
+  color: var(--op);
+}
+
+.btn--zero {
+  grid-column: span 2;
+}
+
+.btn--equals {
+  background: var(--equals);
+  color: #211a02;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.btn--equals:hover {
+  background: var(--equals-hover);
+}
+
+.btn--equals:active {
+  background: var(--equals-active);
+}

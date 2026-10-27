@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Умный калькулятор</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+</head>
+<body>
+  <main class="calc">
+    <header class="calc__header">
+      <h1 class="calc__title">Калькулятор</h1>
+      <span class="calc__badge">Умный</span>
+    </header>
+
+    <div class="calc__screen" id="screen">
+      <div class="calc__expression" id="expression">&nbsp;</div>
+      <div class="calc__result" id="result">0</div>
+    </div>
+
+    <div class="calc__grid">
+      <button class="btn btn--func" data-action="clear">C</button>
+      <button class="btn btn--func" data-action="backspace">⌫</button>
+      <button class="btn btn--func" data-action="percent">%</button>
+      <button class="btn btn--op" data-op="/">÷</button>
+
+      <button class="btn" data-num="7">7</button>
+      <button class="btn" data-num="8">8</button>
+      <button class="btn" data-num="9">9</button>
+      <button class="btn btn--op" data-op="*">×</button>
+
+      <button class="btn" data-num="4">4</button>
+      <button class="btn" data-num="5">5</button>
+      <button class="btn" data-num="6">6</button>
+      <button class="btn btn--op" data-op="-">−</button>
+
+      <button class="btn" data-num="1">1</button>
+      <button class="btn" data-num="2">2</button>
+      <button class="btn" data-num="3">3</button>
+      <button class="btn btn--op" data-op="+">+</button>
+
+      <button class="btn btn--zero" data-num="0">0</button>
+      <button class="btn" data-action="dot">.</button>
+      <button class="btn btn--equals" data-action="equals">=</button>
+    </div>
+  </main>
+</body>
+</html>
